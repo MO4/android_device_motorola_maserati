@@ -1,13 +1,16 @@
+# Release name
+PRODUCT_RELEASE_NAME := maserati
+
 # Inherit device configuration for VZW Droid 4.
 $(call inherit-product, device/motorola/maserati/full_maserati.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common SLIM stuff.
+$(call inherit-product, vendor/slim/config/common_full_phone.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cm_maserati
+PRODUCT_NAME := slim_maserati
 PRODUCT_BRAND := verizon
 PRODUCT_DEVICE := maserati
 PRODUCT_DEVICE_PREFIX := cdma
@@ -28,4 +31,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
    PRODUCT_BRAND=${PRODUCT_BRAND} \
    BUILD_UTC_DATE= \
    PRODUCT_DEFAULT_LANGUAGE=en \
-   PRODUCT_DEFAULT_REGION=US \
+   PRODUCT_DEFAULT_REGION=US

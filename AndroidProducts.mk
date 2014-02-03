@@ -13,3 +13,6 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := $(LOCAL_DIR)/full_maserati.mk
+ifeq ($(TARGET_PRODUCT),slim_maserati)
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/slim.mk
+endif
